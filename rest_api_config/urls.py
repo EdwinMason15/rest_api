@@ -23,4 +23,5 @@ urlpatterns = [
     path('api/', include('core.urls')),
     re_path(r'^auth/', include('rest_framework_social_oauth2.urls')),
     path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
+    path('', include('emails_celery.urls')),
 ]
