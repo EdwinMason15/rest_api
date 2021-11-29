@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'oauth2_provider',
     'social_django',
     'rest_framework_social_oauth2',
+    'emails_celery',
 
 ]
 REST_FRAMEWORK = {
@@ -162,6 +163,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+CELERY_BROKER_URL = ''
+
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZAR = 'json'
 
 AUTH_USER_MODEL = 'core.UserProfile'
 
